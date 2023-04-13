@@ -1,0 +1,24 @@
+Case Name,Steps,Result,Automated
+Buy Energy table values,"Given I am on the Buy Energy Page
+When the page loads
+Then I should see valid/correct values displayed in the table",,Y
+Buy energy units,"Given I am on the Buy Energy Page
+When I input units into the Number of Units Required field
+And click buy on the energy I have inputed a value for
+Then I should be taken to a confirmation page
+And it should show to energy type I chose
+And it should show the amount of units bought
+And it should show the remaining units for that energy type",,Y
+Update Quantity column,"Given I am on the Buy Energy page
+And the total number of units for an energy is X
+When I buy a valid amount of units for that energy
+And I return to the Buy Energy page
+Then I should see the new total is X minus the amount I bought",,Y
+Hide Buy button on unavailable energy,"Given I am on the Buy energy page
+And there is a energy that has 0 available units
+When I view the table
+Then I should not see the buy button
+And see the message Not Available",,Y
+Current time shown on page,"Given I am on the Buy Energy page
+When I view the time on the page
+Then I should see the current time displayed",,N
